@@ -30,30 +30,33 @@ Server chạy tại: `http://localhost:3000`
 * Nếu nhập sai username/password → trả về `403 Access denied`.
 * Nếu nhập đúng → trả về:
 
-  ```
-  You have accessed a protected resource 🎉
-  ```
+```
+You have accessed a protected resource 🎉
+```
 
 ## Xem header `Authorization`
 
 * Sau khi nhập username/password ở tab **Authorization**, Postman sẽ tự sinh header.
 * Vào tab **Headers** để thấy:
 
-  ```
-  Authorization: Basic YWRtaW46MTIzNDU=
-  ```
+```
+Authorization: Basic YWRtaW46MTIzNDU=
+```
+
 * Hoặc nhấn nút **Code (</>)** ở góc phải để xem request (ví dụ cURL) kèm header.
 
 ## Hình minh họa
 
-Đặt hình test trong thư mục `public/results/`:
+![Secure Endpoint](public/results/secure.png)
+*Kết quả khi gọi `/secure` với Basic Auth thành công*
 
-* `public/results/secure.png`
-* `public/results/public.png`
-* `public/results/mongo_cookies.png`
+![Public Endpoint](public/results/public.png)
+*Gọi `/public` không cần xác thực*
 
+![Mongo Cookies](public/results/mongo_cookies.png)
+*Ví dụ cookie được tạo trong Mongo (minh họa)*
 
-
+---
 
 # Simple Auth - Cookie Auth
 
@@ -96,12 +99,11 @@ Server: `http://localhost:3001`
 
 ## Results
 
-Ảnh chụp test lưu tại `public/results/`
-
-* `public/results/login.png`
-* `public/results/logout.png`
-* `public/results/profile.png`
-
 ![Login](public/results/login.png)
+*Khi đăng nhập thành công, cookie được cấp*
+
 ![Logout](public/results/logout.png)
+*Đăng xuất thành công, cookie bị xóa*
+
 ![Profile](public/results/profile.png)
+*Truy cập profile khi còn session hợp lệ*
