@@ -101,3 +101,7 @@ Server: `http://localhost:3001`
 * `public/results/login.png`
 * `public/results/logout.png`
 * `public/results/profile.png`
+
+![Login](public/results/login.png)
+![Logout](public/results/logout.png)
+![Profile](public/results/profile.png)
